@@ -40,14 +40,14 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
 
             <Banner />
 
-            <div className="min-h-screen bg-gray-100 dark:bg-gray-900">
+            <div className="min-h-screen bg-gray-100 dark:bg-gray-900 ">
                 <nav className="bg-white border-b border-gray-100 dark:bg-gray-800 dark:border-gray-700">
                     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         <div className="flex justify-between h-16">
                             <div className="flex">
                                 <div className="flex items-center shrink-0">
                                     <Link href={route('dashboard')}>
-                                        <div className="block w-9 h-9">
+                                        <div className="block w-auto h-auto">
                                             <ApplicationMark />
                                         </div>
                                     </Link>
@@ -58,6 +58,12 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
                                         active={route().current('dashboard')}
                                     >
                                         Dashboard
+                                    </NavLink>
+                                    <NavLink
+                                        href={route('users')}
+                                        active={route().current('users')}
+                                    >
+                                        Users
                                     </NavLink>
                                 </div>
                             </div>
@@ -317,6 +323,12 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
                                 active={route().current('dashboard')}
                             >
                                 Dashboard
+                            </ResponsiveNavLink>
+                            <ResponsiveNavLink
+                                href={route('users')}
+                                active={route().current('users')}
+                            >
+                                Users
                             </ResponsiveNavLink>
                         </div>
                         <div className="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
