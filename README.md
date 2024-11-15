@@ -9,6 +9,8 @@ Projected and Structured by João Vitor de For dos Santos.
 - Npm v.
 
 ```bash
+composer update
+
 npm install
 
 php artisan storage:link
