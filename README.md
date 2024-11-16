@@ -6,7 +6,10 @@ The so-called **Tempo Integral Project** was created for the purpose of creating
 Projected and Structured by João Vitor de For dos Santos.
 
 ## Versions:
-- Npm v.
+- Npm v.10.2.4
+- React v.18.2.0
+- Php v.8.2
+- Laravel v.11.9
 
 ```bash
 composer update
