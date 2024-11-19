@@ -18,6 +18,16 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
         },
+        colors: {
+            transparent: 'transparent',
+            'background': '#EDEDED',
+            'theme-green': '#7CB927',
+            'theme-blue-1': '#084D96',
+            'theme-blue-2': '#145EA3',
+            'theme-blue-light': '#0065C3',
+            'theme-blue-lighter': '#0177E5',
+            'theme-red': '#A31414',
+        },
     },
 
     plugins: [forms, typography],
