@@ -19,6 +19,7 @@ export default {
             },
         },
         colors: {
+            'white': '#FFFFFF',
             transparent: 'transparent',
             'background': '#EDEDED',
             'theme-green': '#7CB927',
@@ -28,6 +29,9 @@ export default {
             'theme-blue-lighter': '#0177E5',
             'theme-red': '#A31414',
         },
+        backgroundImage: {
+            'logo': "url('./resources/assets/logos/Logo-tempo-integral.png')",
+        }
     },
 
     plugins: [forms, typography],

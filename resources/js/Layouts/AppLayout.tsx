@@ -41,7 +41,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
             <Banner />
 
             <div className="min-h-screen bg-gray-100 dark:bg-gray-900 ">
-                <nav className="bg-white border-b border-gray-100 dark:bg-gray-800 dark:border-gray-700">
+                <nav className="bg-background border-b border-gray-100 dark:bg-gray-800 dark:border-gray-700">
                     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         <div className="flex justify-between h-16">
                             <div className="flex">

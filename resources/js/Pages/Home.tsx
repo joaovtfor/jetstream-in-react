@@ -2,13 +2,13 @@ import React from "react";
 import AppLayout from "@/Layouts/AppLayout";
 import Welcome from "@/Components/Welcome";
 
-const Dashboard: React.FC = () => {
+const Home: React.FC = () => {
     return (
         <AppLayout
             title="Dashboard"
             header={
                 <h2 className="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
-                    Dashboard
+                    Home
                 </h2>
             }
         >
@@ -23,4 +23,4 @@ const Dashboard: React.FC = () => {
     );
 };
 
-export default Dashboard;
+export default Home;
