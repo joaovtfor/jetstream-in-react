@@ -41,12 +41,12 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
             <Banner />
 
             <div className="min-h-screen bg-gray-100 dark:bg-gray-900 ">
-                <nav className="bg-background border-b border-gray-100 dark:bg-gray-800 dark:border-gray-700">
+                <nav className="bg-white dark:bg-white shadow-xl">
                     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         <div className="flex justify-between h-16">
                             <div className="flex">
                                 <div className="flex items-center shrink-0">
-                                    <Link href={route('dashboard')}>
+                                    <Link href={route('home')}>
                                         <div className="block w-auto h-auto">
                                             <ApplicationMark />
                                         </div>
@@ -54,10 +54,10 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
                                 </div>
                                 <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                     <NavLink
-                                        href={route('dashboard')}
-                                        active={route().current('dashboard')}
+                                        href={route('home')}
+                                        active={route().current('home')}
                                     >
-                                        Dashboard
+                                        Home
                                     </NavLink>
                                     <NavLink
                                         href={route('users')}
@@ -319,10 +319,10 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
                     >
                         <div className="pt-2 pb-3 space-y-1">
                             <ResponsiveNavLink
-                                href={route('dashboard')}
-                                active={route().current('dashboard')}
+                                href={route('home')}
+                                active={route().current('home')}
                             >
-                                Dashboard
+                                Home
                             </ResponsiveNavLink>
                             <ResponsiveNavLink
                                 href={route('users')}
@@ -471,14 +471,14 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
                 </nav>
 
                 {header && (
-                    <header className="bg-white shadow dark:bg-gray-800">
-                        <div className="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <header className="bg-background shadow dark:bg-gray-800">
+                        <div className="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                             {header}
                         </div>
                     </header>
                 )}
 
-                <main>{children}</main>
+                <main className='bg-background'>{children}</main>
             </div>
         </div>
     );

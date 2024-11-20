@@ -1,7 +1,9 @@
 import logo from '../../assets/logos/Logo-tempo-integral.png'
 
-export default function ApplicationLogo(props: any) {
+const ApplicationLogo = ({ className }: { className?: string }) => {
     return (
-        <img className='w-[200px] m-auto' src={logo} alt="Logo" />
+        <img className={'w-[200px] m-auto ' + className} src={logo} alt="Logo" />
     );
 }
+
+export default ApplicationLogo;

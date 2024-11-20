@@ -1,5 +1,5 @@
 import { Head, Link, useForm } from '@inertiajs/react';
-import { useEffect, FormEventHandler } from 'react';
+import { useEffect } from 'react';
 import styled from 'styled-components';
 
 import Checkbox from '@/Components/Checkbox';
@@ -26,7 +26,7 @@ const Login = ({ status, canResetPassword }: { status?: string; canResetPassword
         };
     }, []);
 
-    const submit: FormEventHandler = (e) => {
+    const submit: React.FormEventHandler = (e) => {
         e.preventDefault();
         post(route('login'));
     };
@@ -64,7 +64,7 @@ const Login = ({ status, canResetPassword }: { status?: string; canResetPassword
                     <SecondApplicationLogo />
                 </div>
 
-                <form onSubmit={submit} className='flex flex-col items-stretch'>
+                <form onSubmit={submit}>
                     <div>
                         <InputLabel htmlFor="email" value="E-Mail" />
 
@@ -82,7 +82,7 @@ const Login = ({ status, canResetPassword }: { status?: string; canResetPassword
                         <InputError message={errors.email} className="mt-2" />
                     </div>
 
-                    <div className="mt-4">
+                    <div className='mt-4'>
                         <InputLabel htmlFor="password" value="Senha" />
 
                         <TextInput
