@@ -2,19 +2,21 @@ import React, { ReactNode } from 'react';
 
 interface MyComponentProps {
     title: ReactNode;
-    description: ReactNode;
+    description?: ReactNode;
     aside?: ReactNode;
+    className?: string;
 }
 
 const MyComponent: React.FC<MyComponentProps> = ({
     title,
     description,
     aside,
+    className
 }) => {
     return (
         <div className="flex justify-between md:col-span-1">
             <div className="px-4 sm:px-0">
-                <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100">
+                <h3 className="text-xl font-black text-theme-blue-2 dark:text-theme-blue-2">
                     {title}
                 </h3>
 

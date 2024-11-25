@@ -2,13 +2,16 @@ import logo from '../../assets/logos/Logo-tempo-integral.png';
 import styled from 'styled-components';
 
 const Img = styled.img`
-    width: 80px;
 `;
 
-const MySvgComponent: React.FC = () => {
+interface MySvgComponentProps {
+    className?: string;
+}
+
+const MySvgComponent: React.FC<MySvgComponentProps> = ({ className }) => {
     return (
         <div>
-            <Img src={logo} alt="Logo" />
+            <Img className={className} src={logo} alt="Logo" />
         </div>
     );
 };
