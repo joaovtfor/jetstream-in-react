@@ -1,5 +1,5 @@
 import { Head, Link, useForm } from '@inertiajs/react';
-import { useEffect } from 'react';
+import { FormEventHandler, useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import Checkbox from '@/Components/Checkbox';
@@ -13,7 +13,18 @@ import logo from '../../../assets/logos/Logo-lisa.png'
 
 import SecondApplicationLogo from '@/Components/SecondApplicationLogo';
 
+const LoginContainer = styled.div`
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    `;
+
+    const LoginBackground = styled.div`
+    `;
+
 const Login = ({ status, canResetPassword }: { status?: string; canResetPassword: boolean; }) => {
+
     const { data, setData, post, processing, errors, reset } = useForm({
         email: '',
         password: '',
@@ -30,16 +41,6 @@ const Login = ({ status, canResetPassword }: { status?: string; canResetPassword
         e.preventDefault();
         post(route('login'));
     };
-
-    const LoginContainer = styled.div`
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    `;
-
-    const LoginBackground = styled.div`
-    `;
 
     return (
         <div className='w-full overflow-hidden flex flex-col sm:justify-center items-center pt-6 sm:pt-0'>
@@ -64,7 +65,7 @@ const Login = ({ status, canResetPassword }: { status?: string; canResetPassword
                     <SecondApplicationLogo />
                 </div>
 
-                <form onSubmit={submit}>
+                <form onSubmit={submit} className='flex flex-col items-stretch'>
                     <div>
                         <InputLabel htmlFor="email" value="E-Mail" />
 
@@ -113,17 +114,17 @@ const Login = ({ status, canResetPassword }: { status?: string; canResetPassword
                         </label>
                     </div>
 
-                    <div className="flex items-center justify-center mt-4">
+                    <div className="flex items-center justify-end mt-4">
                         {canResetPassword && (
                             <Link
                                 href={route('password.request')}
-                                className="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                                className="underline text-sm text-theme-blue-2 dark:text-theme-blue-2 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
                             >
                                 Esqueceu sua senha?
                             </Link>
                         )}
 
-                        <PrimaryButton className="m-auto" disabled={processing}>
+                        <PrimaryButton className="ms-4" disabled={processing}>
                             Entrar
                         </PrimaryButton>
                     </div>
