@@ -35,20 +35,20 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
     };
 
     return (
-        <div>
+        <div className='w-full h-full'>
             <Head title={title} />
 
             <Banner />
 
             <div className="min-h-screen bg-gray-100 dark:bg-gray-900 ">
                 <nav className="bg-white dark:bg-white shadow-xl">
-                    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                        <div className="flex justify-between h-16">
+                    <div className="px-0 w-full sm:px-0 lg:px-0 bg-white">
+                        <div className="flex justify-between h-24">
                             <div className="flex">
                                 <div className="flex items-center shrink-0">
                                     <Link href={route('home')}>
                                         <div className="block w-auto h-auto">
-                                            <ApplicationMark />
+                                            <ApplicationMark className='w-28'/>
                                         </div>
                                     </Link>
                                 </div>
@@ -472,7 +472,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
 
                 {header && (
                     <header className="bg-background shadow dark:bg-gray-800">
-                        <div className="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                        <div className="px-4 py-4 mx-auto max-w-7xl sm:px-6 lg:px-0">
                             {header}
                         </div>
                     </header>
