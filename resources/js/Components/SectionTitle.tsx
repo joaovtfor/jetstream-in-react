@@ -14,7 +14,7 @@ const MyComponent: React.FC<MyComponentProps> = ({
     className
 }) => {
     return (
-        <div className="flex justify-between md:col-span-1">
+        <div className="flex justify-between md:col-span-1 text-center">
             <div className="px-4 sm:px-0">
                 <h3 className="text-xl font-black text-theme-blue-2 dark:text-theme-blue-2">
                     {title}

@@ -42,7 +42,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ title, children, header }) => {
 
             <div className="min-h-screen bg-gray-100 dark:bg-gray-900 ">
                 <nav className="bg-white dark:bg-white shadow-xl">
-                    <div className="px-0 w-full sm:px-0 lg:px-0 bg-white">
+                    <div className="px-0 w-full sm:px-0 lg:px-10 bg-white">
                         <div className="flex justify-between h-24">
                             <div className="flex">
                                 <div className="flex items-center shrink-0">
