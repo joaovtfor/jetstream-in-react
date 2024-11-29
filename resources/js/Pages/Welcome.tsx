@@ -4,19 +4,7 @@ import logo from '../../assets/logos/Logo-lisa.png'
 
 export default function Welcome({
     auth,
-    laravelVersion,
-    phpVersion,
-}: PageProps<{ laravelVersion: string; phpVersion: string }>) {
-    const handleImageError = () => {
-        document
-            .getElementById('screenshot-container')
-            ?.classList.add('!hidden');
-        document.getElementById('docs-card')?.classList.add('!row-span-1');
-        document
-            .getElementById('docs-card-content')
-            ?.classList.add('!flex-row');
-        document.getElementById('background')?.classList.add('!hidden');
-    };
+}: PageProps) {
 
     return (
         <>
@@ -57,9 +45,22 @@ export default function Welcome({
                             )}
                         </nav>
                     </header>
-
-                    <footer className="w-full h-2 py-4 text-sm text-center flex items-center justify-center text-theme-blue-2 dark:text-theme-blue-2">
-                        João Vitor de For dos Santos &copy; 2024
+                    <main className='w-full flex items-center'>
+                        <section className='flex flex-col items-center w-[60%] gap-y-5 ml-10'>
+                            <h2 className='text-3xl text-theme-blue-2 font-bold'>Projeto Tempo Integral</h2>
+                            <p className='text-md text-theme-blue-light font-normal text-justify'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut totam alias labore quam! Enim veritatis eos ex beatae alias totam dolor, iste esse omnis optio natus accusamus sunt nesciunt corporis, aut dolorem qui aspernatur ea vel. Fugit, harum illo rem reiciendis deleniti laudantium natus culpa amet debitis, vel quibusdam sint? Impedit laborum nam sunt mollitia.</p>
+                            <p className='text-md text-theme-blue-light font-normal text-justify'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut totam alias labore quam! Enim veritatis eos ex beatae alias totam dolor, iste esse omnis optio natus accusamus sunt nesciunt corporis, aut dolorem qui aspernatur ea vel. Fugit, harum illo rem reiciendis deleniti laudantium natus culpa amet debitis, vel quibusdam sint? Impedit laborum nam sunt mollitia.</p>
+                            <p className='text-md text-theme-blue-light font-normal text-justify'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut totam alias labore quam! Enim veritatis eos ex beatae alias totam dolor, iste esse omnis optio natus accusamus sunt nesciunt corporis, aut dolorem qui aspernatur ea vel. Fugit, harum illo rem reiciendis deleniti laudantium natus culpa amet debitis, vel quibusdam sint? Impedit laborum nam sunt mollitia.</p>
+                            <p className='text-md text-theme-blue-light font-normal text-justify'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut totam alias labore quam! Enim veritatis eos ex beatae alias totam dolor, iste esse omnis optio natus accusamus sunt nesciunt corporis, aut dolorem qui aspernatur ea vel. Fugit, harum illo rem reiciendis deleniti laudantium natus culpa amet debitis, vel quibusdam sint? Impedit laborum nam sunt mollitia.</p>
+                        </section>
+                        <aside className='w-72 h-full mx-auto flex items-center justify-center '>
+                            <img src={logo} alt="Logo" />
+                        </aside>
+                    </main>
+                    <footer className="w-full h-2 mt-10 py-4 text-sm text-center font-black flex items-center justify-center text-theme-blue-2 dark:text-theme-blue-2">
+                        <a href="https://linkedin.com/in/joaovtor" target='_blank'>
+                            <p>João Vitor de For dos Santos &copy; 2024</p>
+                        </a>
                     </footer>
                 </div>
             </div>

@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Laravel\Fortify\Fortify;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -19,7 +20,9 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/home', function () {
-        return Inertia::render('Home');
+        return Inertia::render('Home', [
+            'canRegister' => Route::has('register'),
+        ]);
     })->name('home');
 });
 
@@ -29,6 +32,12 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/users', function () {
-        return Inertia::render('Users');
+        return Inertia::render('Users', [
+            'canRegister' => Route::has('register'),
+        ]);
     })->name('users');
+});
+
+Fortify::registerView(function () {
+    return Inertia::render('users');
 });
